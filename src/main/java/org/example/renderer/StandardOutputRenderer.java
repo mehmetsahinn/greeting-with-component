@@ -16,11 +16,7 @@ public class StandardOutputRenderer implements GreetingRenderer {
 	public void setGreetingProvider(@Qualifier("hello") GreetingProvider greetingProvider) {
 		this.greetingProvider = greetingProvider;
 	}
-	
-//	@Autowired
-	public void setHelloWorldGreetingProvider(GreetingProvider greetingProvider) {
-		this.greetingProvider = greetingProvider;
-	}
+
 
 	public void render() {
 		System.out.println(greetingProvider.getGreeting());
