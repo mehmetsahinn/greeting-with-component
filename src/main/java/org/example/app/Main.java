@@ -10,10 +10,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
-        //ApplicationContext context = new AnnotationConfigApplicationContext();
-        //ApplicationContext context = new AnnotationConfigApplicationContext(MainApp.class);
         GreetingRenderer renderer1 = (GreetingRenderer) context.getBean("standardOutputRenderer");
         renderer1.render();
+
+        GreetingRenderer renderer2 = (GreetingRenderer) context.getBean("errorOutputRenderer");
+        renderer2.render();
 
     }
 }
